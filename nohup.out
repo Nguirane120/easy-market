@@ -1,0 +1,487 @@
+python3: can't open file '/var/www/kayjeund/runserver': [Errno 2] No such file or directory
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '167.99.253.190:7000'. You may need to add '167.99.253.190' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '167.99.253.190:7000'. You may need to add '167.99.253.190' to ALLOWED_HOSTS.
+Bad Request: /
+[26/May/2023 12:42:30] "GET / HTTP/1.1" 400 66945
+Invalid HTTP_HOST header: '167.99.253.190:7000'. You may need to add '167.99.253.190' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/deprecation.py", line 135, in __call__
+    response = self.process_request(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/http/request.py", line 148, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '167.99.253.190:7000'. You may need to add '167.99.253.190' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[26/May/2023 12:42:35] "GET /favicon.ico HTTP/1.1" 400 67014
+/var/www/kayjeund/kayjeund/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 26, 2023 - 12:42:29
+Django version 4.1.3, using settings 'kayjeund.settings'
+Starting development server at http://0.0.0.0:7000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Not Found: /
+[26/May/2023 12:43:48] "GET / HTTP/1.1" 404 2280
+Not Found: /
+[26/May/2023 12:44:04] "GET / HTTP/1.1" 404 2280
+Not Found: /
+[26/May/2023 12:44:44] "GET / HTTP/1.1" 404 2280
+Not Found: /favicon.ico
+[26/May/2023 12:44:45] "GET /favicon.ico HTTP/1.1" 404 2331
+Not Found: /
+[26/May/2023 12:44:52] "GET / HTTP/1.1" 404 2280
+[26/May/2023 12:45:22] "GET /api/v1/docs HTTP/1.1" 301 0
+[26/May/2023 12:45:22] "GET /api/v1/docs/ HTTP/1.1" 200 2160
+[26/May/2023 12:45:22] "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[26/May/2023 12:45:22] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[26/May/2023 12:45:22] "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[26/May/2023 12:45:22] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[26/May/2023 12:45:22] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143858
+[26/May/2023 12:45:23] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
+[26/May/2023 12:45:23] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+[26/May/2023 12:45:23] "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[26/May/2023 12:45:23] "GET /api/v1/docs/?format=openapi HTTP/1.1" 200 14469
+[26/May/2023 12:45:24] "GET /api/v1/docs/?format=openapi HTTP/1.1" 200 14469
+Not Found: /
+[26/May/2023 13:11:31] "GET / HTTP/1.1" 404 2280
+Not Found: /
+[26/May/2023 13:11:38] "GET / HTTP/1.1" 404 2280
+Not Found: /
+[26/May/2023 13:12:44] "GET / HTTP/1.1" 404 2280
+Not Found: /favicon.ico
+[26/May/2023 13:12:44] "GET /favicon.ico HTTP/1.1" 404 2331
+[26/May/2023 13:12:59] "GET /api/v1/docs HTTP/1.1" 301 0
+[26/May/2023 13:13:00] "GET /api/v1/docs/ HTTP/1.1" 200 2160
+[26/May/2023 13:13:00] "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[26/May/2023 13:13:00] "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[26/May/2023 13:13:00] "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+[26/May/2023 13:13:00] "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[26/May/2023 13:13:00] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143858
+[26/May/2023 13:13:00] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
+[26/May/2023 13:13:01] "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+[26/May/2023 13:13:02] "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[26/May/2023 13:13:02] "GET /api/v1/docs/?format=openapi HTTP/1.1" 200 14469
+[26/May/2023 13:13:03] "GET /api/v1/docs/?format=openapi HTTP/1.1" 200 14469
+[26/May/2023 13:14:15] "POST /api/v1/users/ HTTP/1.1" 201 104
+[26/May/2023 13:14:45] "POST /api/v1/login/ HTTP/1.1" 200 302
+Forbidden: /api/v1/category/
+[26/May/2023 13:15:34] "POST /api/v1/category/ HTTP/1.1" 403 82
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 13:15:47] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Not Found: /favicon.ico
+[26/May/2023 13:15:48] "GET /favicon.ico HTTP/1.1" 404 2331
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 13:15:53] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 13:16:00] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 13:16:45] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 13:16:51] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Not Found: /
+[26/May/2023 14:55:08] "GET / HTTP/1.1" 404 2280
+[26/May/2023 14:55:33] "GET /api/v1/docs HTTP/1.1" 301 0
+[26/May/2023 14:55:33] "GET /api/v1/docs/ HTTP/1.1" 200 2160
+Internal Server Error: /api/v1/docs/
+Traceback (most recent call last):
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/rest_framework/response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/drf_yasg/renderers.py", line 79, in render
+    return render_to_string(self.template, renderer_context, renderer_context['request'])
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/template/base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "/var/www/kayjeund/venv/lib/python3.9/site-packages/django/utils/functional.py", line 268, in inner
+    return func(_wrapped, *args)
+TypeError: __str__ returned non-string (type NoneType)
+[26/May/2023 14:55:35] "GET /api/v1/docs/ HTTP/1.1" 500 224257
+Not Found: /favicon.ico
+[26/May/2023 14:55:35] "GET /favicon.ico HTTP/1.1" 404 2331

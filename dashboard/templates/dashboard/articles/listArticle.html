@@ -1,0 +1,55 @@
+{% extends 'dashboard/base.html' %}
+
+
+{% block content %}
+<div class="row">
+    <div class="d-flex justify-content-around">
+
+        <h1 class="mr-5">Liste des produits
+        </h1>
+        <a href="{% url 'add-article' %}" class="btn btn-primary btn-lg">Ajouter un produit</a>
+    </div>
+    {% if articles %}
+    
+    {% endif %}
+    <table class="table table-striped mt-4">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Prix</th>
+            <th scope="col">categoryId</th>
+            <th scope="col">userId</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for a in articles  %}
+            
+            <tr>
+            
+            <td>{{a.id}}</td>
+            <td>{{a.articleName}}</td>
+            <td>{{a.articleDescription}}</td>
+            <td>{{a.articleInStock}}</td>
+            <td>{{a.articlePrice}}</td>
+            <td>{{a.categoryId}}</td>
+            <td>{{a.userId}}</td>
+            <td>
+              <a href="{% url 'update-article' a.id %}" class="p-4"><i class="fas fa-edit text-primary"></i></a>
+
+            </td>
+            <td class="text-center">
+              <a href="{% url 'delete-article' a.id %}"><i class="fas fa-trash text-danger"></i></a>
+            </td> 
+
+        </tr>
+            {% endfor %}
+
+        </tbody>
+      </table>
+</div>
+{% endblock content %}
+
