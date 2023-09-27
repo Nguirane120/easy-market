@@ -10,3 +10,4 @@ from .auth import *
 from .register import *
 from .approvisonnement import *
 from .acheteur import *
+from .vendeur import *

@@ -4,7 +4,7 @@ from ..serializers import AcheteurSerialzer
 from ..models import Acheteur
 
 
-class AcheteurAPIView(generics.ListCreateAPIView):
+class CreateAcheteurAPIView(generics.CreateAPIView):
     """
     POST api/v1/client/
     """
@@ -18,11 +18,19 @@ class AcheteurAPIView(generics.ListCreateAPIView):
             return Response(serializer.data,status=201)
         return Response(serializer.errors, status=400)
         
+    
+class AcheteurAllAPIView(generics.ListAPIView):
+    """
+    GET ALL api/v1/client/
+    """
+    queryset = Acheteur.objects.all()
+    serializer_class = AcheteurSerialzer
+
     def get(self, request, format=None):
         items = Acheteur.objects.filter(archived=False).order_by('pk')
         serializer = AcheteurSerialzer(items, many=True)
         return Response(serializer.data)
-
+    
 class AcheteurByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
     # permission_classes = (
     #     permissions.IsAuthenticated,
@@ -62,7 +70,7 @@ class AcheteurByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
         except Acheteur.DoesNotExist:
             return Response({
                 "status": "failure",
-                "message": "no such item with this id",
+                "message": "pas d'acheteur avec cet id",
                 }, status=404)
         item.archived=True
         item.save()

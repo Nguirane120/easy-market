@@ -95,9 +95,11 @@ urlpatterns = [
             
             
 #acheteur
-            path('acheteur/', views.AcheteurAPIView.as_view()),
-            path('article/<int:id>/', views.AcheteurByIdAPIView.as_view()),
-            path('article/<int:createdBy>/', views.AcheteurByUser.as_view()),
+            path('acheteurs/', views.AcheteurAllAPIView.as_view()),
+            path('acheteur/', views.CreateAcheteurAPIView.as_view()),
+            # path('login_acheteur/', views.AcheteurAPIView.as_view()),
+            path('acheteur/<int:id>/', views.AcheteurByIdAPIView.as_view()),
+            path('acheteur/<int:vendeurId>/', views.AcheteurByUser.as_view()),
             # Notification
 
             path('notifications/' , NotificationsApiView.as_view()),

@@ -7,3 +7,4 @@ from .panier import *
 from .user import *
 from .images import *
 from .acheteur import *
+from .vendeur import *
