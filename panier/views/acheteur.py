@@ -76,13 +76,15 @@ class AcheteurByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
         item.save()
         return Response({"message": "deleted"},status=204)
     
-class AcheteurByUser(generics.RetrieveAPIView):
+class RetreiveAcheteurByVendeurAPIView(generics.RetrieveAPIView):
+    print('OKKKKKKKKKKKK')
+
     queryset = Acheteur.objects.all()
     serializer_class = AcheteurSerialzer
 
-    def get(self, request, id, format=None):
+    def get(self, request, vendeurId, format=None):
         try:
-            items = Acheteur.objects.filter(archived=False).filter(createdBy=id)
+            items = Acheteur.objects.filter(archived=False).filter(vendeurId=vendeurId)
             serializer = AcheteurSerialzer(items,many=True)
             return Response(serializer.data)
         except Acheteur.DoesNotExist:

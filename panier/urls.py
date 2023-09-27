@@ -99,7 +99,7 @@ urlpatterns = [
             path('acheteur/', views.CreateAcheteurAPIView.as_view()),
             # path('login_acheteur/', views.AcheteurAPIView.as_view()),
             path('acheteur/<int:id>/', views.AcheteurByIdAPIView.as_view()),
-            path('acheteur/<int:vendeurId>/', views.AcheteurByUser.as_view()),
+            path('acheteurs/vendeur/<int:vendeurId>/', views.RetreiveAcheteurByVendeurAPIView.as_view()),
             # Notification
 
             path('notifications/' , NotificationsApiView.as_view()),
