@@ -77,8 +77,7 @@ class AcheteurByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
         return Response({"message": "deleted"},status=204)
     
 class RetreiveAcheteurByVendeurAPIView(generics.RetrieveAPIView):
-    print('OKKKKKKKKKKKK')
-
+   
     queryset = Acheteur.objects.all()
     serializer_class = AcheteurSerialzer
 

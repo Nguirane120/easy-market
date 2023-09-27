@@ -70,13 +70,13 @@ class CategoryByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
     
 
 
-class CategoryCreatedByView(generics.RetrieveAPIView):
+class CategoryVendeurIdView(generics.RetrieveAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    def get(self, request, createdBy, format=None):
+    def get(self, request, vendeurId, format=None):
         try:
-            item = Category.objects.filter(archived=False, userId=createdBy)
+            item = Category.objects.filter(archived=False, vendeurId=vendeurId)
             serializer = CategorySerializer(item, many=True)
             return Response(serializer.data)
         except Category.DoesNotExist:

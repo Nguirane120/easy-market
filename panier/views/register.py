@@ -177,13 +177,13 @@ class DeblockUserAPIView(generics.UpdateAPIView):
 
 
 
-class AddUser(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = VendeurUserSerializer
+# class AddUser(generics.CreateAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = VendeurUserSerializer
 
-    def post(self, request):
-        # user = request.data
-        serializer = VendeurUserSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+#     def post(self, request):
+#         # user = request.data
+#         serializer = VendeurUserSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         serializer.save()
+#         return Response(serializer.data, status=status.HTTP_201_CREATED)

@@ -72,13 +72,13 @@ class ArticleByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
         return Response({"message": "deleted"}, status=204)
 
 
-class ArticleCreatedByView(generics.RetrieveAPIView):
+class ArticleVendeurIdView(generics.RetrieveAPIView):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
 
-    def get(self, request, createdBy, format=None):
+    def get(self, request, id, format=None):
         try:
-            item = Article.objects.filter(archived=False, userId=createdBy)
+            item = Article.objects.filter(archived=False, categoryId=id)
             serializer = ArticleSerializer(item, many=True)
             return Response(serializer.data)
         except Article.DoesNotExist:
@@ -95,6 +95,20 @@ class ArticleFavoriteView(generics.RetrieveAPIView):
     def get(self, request, format=None):
         try:
             item = Article.objects.filter(isFavorite=True)
+            serializer = ArticleSerializer(item, many=True)
+            return Response(serializer.data)
+        except Article.DoesNotExist:
+            return Response({
+                "status": "failure",
+                "message": "Cet item n'existe pas",
+            }, status=404)
+class AllArticleVendeurIdView(generics.RetrieveAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+
+    def get(self, request, id, format=None):
+        try:
+            item = Article.objects.filter(archived=False, vendeurId=id)
             serializer = ArticleSerializer(item, many=True)
             return Response(serializer.data)
         except Article.DoesNotExist:

@@ -1,5 +1,6 @@
 from django.db import models
 from .user import User
+from .vendeur import Vendeur
 from .category import Category
 from .images import Image
 
@@ -17,8 +18,7 @@ class Article(models.Model):
     # images = models.FileField(
     #     upload_to='uploads/article', null=True, blank=True)
     images = models.ManyToManyField(Image, blank=True)
-    userId = models.ForeignKey(
-        User, on_delete=models.CASCADE, default=1, related_name='articles')
+    vendeurId = models.ForeignKey(Vendeur, on_delete=models.CASCADE,related_name='articles')
     archived = models.BooleanField(default=False)
     isFavorite = models.BooleanField(default=False)
 

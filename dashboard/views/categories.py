@@ -16,12 +16,12 @@ def addCategory(request):
       categoryName = request.POST['categoryName']
       description = request.POST['description']
       images = request.POST['images']
-      userId = request.user
+      vendeurId = request.vendeur
       category = Category.objects.create(
           categoryName=categoryName,
           description=description,
           images=images,
-          userId=userId
+          vendeurId=vendeurId
         )
       category.save()
           

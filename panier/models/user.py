@@ -16,7 +16,8 @@ class MyUserManager(BaseUserManager):
             lastName= lastName,
             firstName = firstName,
             phone= phone,
-            adresse= adresse
+            adresse= adresse,
+            user_type='VENDEUR'
         )
 
         user.set_password(password)
@@ -63,14 +64,12 @@ class User(AbstractBaseUser,PermissionsMixin):
     #     default=ADMIN,
     # )
     phone = models.CharField(max_length=40, unique=True)
-    # nom_complet = models.CharField(max_length=100, blank=True)
     firstName = models.CharField(max_length=100, blank=True)
     lastName = models.CharField(max_length=100, blank=True)
     email = models.EmailField(("Email"), max_length=254,unique=True, blank=True, null=True)
     adresse = models.CharField(blank=True, max_length=255, null=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    tailleur = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
     user_type = models.CharField(max_length=20, choices=STATUS, blank=True)
     archived = models.BooleanField(default=False)

@@ -1,11 +1,11 @@
 from django.db import models
-from .user import User
+from .vendeur import Vendeur
 
 class Category(models.Model):
     categoryName = models.CharField(max_length=250, blank=True, null=True)
     description = models.CharField(max_length=512,blank=True, null=True)
     images = models.FileField(upload_to='uploads/categoriy',null=True, blank=True)
-    userId = models.ForeignKey(User, on_delete=models.CASCADE, related_name='category', default=1)
+    vendeurId = models.ForeignKey(Vendeur, on_delete=models.CASCADE, related_name='category')
     archived = models.BooleanField(default=False)
 
 

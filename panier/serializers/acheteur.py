@@ -7,7 +7,7 @@ class AcheteurSerialzer(serializers.ModelSerializer):
 
     class Meta:
         model = Acheteur
-        fields = ['id', 'phone', 'lastName', 'firstName', 'vendeurId','password','user_type', 'email', 'adresse', 'is_active', 'vendeur']
+        fields = ['id', 'phone', 'lastName', 'firstName', 'vendeur_id','password','user_type', 'email', 'adresse', 'is_active', 'vendeur']
         
         extra_kwargs = {'password': {'write_only': True}}
 
@@ -18,7 +18,7 @@ class AcheteurSerialzer(serializers.ModelSerializer):
             firstName=validated_data['firstName'],
             email=validated_data.get("email"),
             adresse=validated_data['adresse'],
-            vendeurId=validated_data['vendeurId'],
+            vendeur_id=validated_data['vendeur_id'],
             user_type=validated_data['user_type'],
         )
         # Utilisez set_password pour crypter le mot de passe

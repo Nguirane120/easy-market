@@ -32,7 +32,7 @@ urlpatterns = [
             path('users/<int:id>', views.UserById.as_view()),
             path('vendeur/block/<int:user_id>', views.BlockUserAPIView.as_view(), name='block_user'),
             path('vendeur/dblock/<int:user_id>', views.DeblockUserAPIView.as_view(), name='dblock_user'),
-            path('vendeur/', views.AddUser.as_view()),
+            # path('vendeur/', views.AddUser.as_view()),
 
             # path('user/password/<int:id>', views.UserUpdatePassword.as_view()),
             path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
@@ -64,13 +64,14 @@ urlpatterns = [
             # category 
             path('category/', views.CategoryAPIView.as_view()),
             path('category/<int:id>/', views.CategoryByIdAPIView.as_view()),
-            path('category/user/<int:createdBy>/',views.CategoryCreatedByView.as_view()),
+            path('category/user/<int:vendeurId>/',views.CategoryVendeurIdView.as_view()),
 
 
             # article 
             path('article/', views.ArticleAPIView.as_view()),
             path('article/<int:id>/', views.ArticleByIdAPIView.as_view()),
-            path('article/<int:createdBy>/', views.ArticleCreatedByView.as_view()),
+            path('articles/category/<int:id>/', views.ArticleVendeurIdView.as_view()),
+            path('articles/vendeur/<int:id>/', views.AllArticleVendeurIdView.as_view()),
             path('article/favorite/' , views.ArticleFavoriteView.as_view()),
 
             path("approvison/<int:id>/",views.ApprovisonArticle.as_view()),
@@ -94,14 +95,19 @@ urlpatterns = [
             # path('employees/<int:pk>', DetailEmployee.as_view()),
             
             
-#acheteur
+            #acheteur
             path('acheteurs/', views.AcheteurAllAPIView.as_view()),
             path('acheteur/', views.CreateAcheteurAPIView.as_view()),
-            # path('login_acheteur/', views.AcheteurAPIView.as_view()),
             path('acheteur/<int:id>/', views.AcheteurByIdAPIView.as_view()),
             path('acheteurs/vendeur/<int:vendeurId>/', views.RetreiveAcheteurByVendeurAPIView.as_view()),
-            # Notification
 
+            # vendeur
+             #acheteur
+            path('vendeurs/', views.VendeurAllAPIView.as_view()),
+            path('vendeur/', views.CreateVendeurAPIView.as_view()),
+            path('vendeur/<int:id>/', views.VendeurByIdAPIView.as_view()),
+
+            # Notification
             path('notifications/' , NotificationsApiView.as_view()),
             path('notifications/<int:id>/' , NotificationByIdApiView.as_view())
 

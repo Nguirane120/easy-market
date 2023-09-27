@@ -16,10 +16,10 @@ from .images import ImageSerializer
 
 class ArticleSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True, source="categoryId")
-    user = UserSerializer(read_only=True, source="userId")
+    vendeur = UserSerializer(read_only=True, source="vendeurId")
     imagesData = ImageSerializer(read_only=True, source="images", many=True)
 
     class Meta:
         model = Article
         fields = ('id', 'articleName', 'articleDescription', 'articlePrice', 'images', 'imagesData',
-                  'articleActif', 'articleInStock','articleInStockSecurite', 'categoryId', 'category', 'userId', 'user', 'archived', 'isFavorite')
+                  'articleActif', 'articleInStock','articleInStockSecurite', 'categoryId', 'category', 'vendeurId', 'vendeur', 'archived', 'isFavorite')

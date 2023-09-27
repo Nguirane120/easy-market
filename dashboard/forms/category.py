@@ -7,7 +7,7 @@ from django.forms import ModelForm, TextInput, NumberInput,FileInput, Select
 class CategorytForm(ModelForm):
     class Meta:
         model = Category
-        fields = ['categoryName', 'description', 'images', 'userId']
+        fields = ['categoryName', 'description', 'images', 'vendeurId']
         widgets = {
             'categoryName': TextInput(attrs={
                 'class': "form-control",
@@ -23,7 +23,7 @@ class CategorytForm(ModelForm):
                 'class': "form-control", 
                
                 }),
-            'userId': Select(attrs={
+            'vendeurId': Select(attrs={
                 'class': "form-control", 
                
                 }),
