@@ -6,6 +6,7 @@ from .article import Article
 from .payment import CallbackPayment
 from .user import User
 from .vendeur import Vendeur
+from .acheteur import Acheteur
 
 
 
@@ -43,6 +44,7 @@ class Order(models.Model):
     lastName = models.CharField(max_length=100, blank=True)
     adresse = models.CharField(blank=True, max_length=255, null=True)
     vendeur_id = models.ForeignKey(Vendeur, on_delete=models.CASCADE, default=1 , null=True)
+    acheteur_id = models.ForeignKey(Acheteur, on_delete=models.CASCADE, null=True)
 
 
     def __str__(self):

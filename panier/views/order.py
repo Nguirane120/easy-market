@@ -29,7 +29,7 @@ class OrderAPIView(generics.ListCreateAPIView):
         serializer = OrderSerializer(data=request.data)
         if serializer.is_valid():
             # Create the order
-            order = serializer.save()
+            serializer.save()
 
             # Retrieve the articles included in the order
             article_ids = request.data.get('articleId', [])
@@ -254,6 +254,20 @@ class OrderByVendeur(generics.RetrieveAPIView):
         id = self.kwargs.get('id')
         orders = Order.objects.filter(
             archived=False, vendeur_id=id)
+
+        paginated_items = self.paginate_queryset(orders)
+        serializer = OrderSerializer(paginated_items, many=True)
+        return self.get_paginated_response(serializer.data)
+    
+class OrderByAcheteur(generics.RetrieveAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+    def get(self, request, id, format=None):
+        self.pagination_class.page_size = 10
+    
+        orders = Order.objects.filter(
+            archived=False, acheteur_id=id)
 
         paginated_items = self.paginate_queryset(orders)
         serializer = OrderSerializer(paginated_items, many=True)

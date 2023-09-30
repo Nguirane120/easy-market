@@ -3,11 +3,11 @@ from ..models import Acheteur
 from .user import UserSerializer
 
 class AcheteurSerialzer(serializers.ModelSerializer):
-    vendeur = UserSerializer(read_only=True, source="vendeurId")
+    vendeur = UserSerializer(read_only=True, source="vendeur_id")
 
     class Meta:
         model = Acheteur
-        fields = ['id', 'phone', 'lastName', 'firstName', 'vendeur_id','password','user_type', 'email', 'adresse', 'is_active', 'vendeur']
+        fields = ['id', 'phone', 'lastName', 'firstName', 'vendeur_id',  'vendeur', 'password','user_type', 'email', 'adresse', 'is_active']
         
         extra_kwargs = {'password': {'write_only': True}}
 

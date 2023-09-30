@@ -6,6 +6,7 @@ from .payment import PaymentSerializer
 from .user import UserSerializer
 from .article import ArticleSerializer
 from .vendeur import VendeurSerialzer
+from .acheteur import AcheteurSerialzer
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -13,6 +14,7 @@ class OrderSerializer(serializers.ModelSerializer):
     payment = PaymentSerializer(read_only=True, source="paymentId")
     article = ArticleSerializer(read_only=True, source="articleId", many=True)
     vendeur = VendeurSerialzer(read_only=True, source="vendeur_id")
+    acheteur = AcheteurSerialzer(read_only=True, source="acheteur_id")
     total_price = serializers.SerializerMethodField()
     def get_total_price(self, obj):
         # Calculer le prix total des produits commandés pour l'objet Order
@@ -24,7 +26,7 @@ class OrderSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Order
-        fields = ('id', 'order_number', 'date_created', 'orderQuantity','articleId', 'article', 'status','paymentId','payment', 'archived', 'vendeur_id', 'vendeur', 'total_price' , 'payment_method' , 'status_paiement' , 'phone' , 'firstName' , 'lastName' , 'adresse')
+        fields = ('id', 'order_number', 'date_created', 'orderQuantity','articleId', 'article', 'status','paymentId','payment', 'archived', 'vendeur_id', 'vendeur', 'acheteur_id','acheteur', 'total_price' , 'payment_method' , 'status_paiement' , 'phone' , 'firstName' , 'lastName' , 'adresse')
         
         
 class CommandesParJourSerializer(serializers.Serializer):

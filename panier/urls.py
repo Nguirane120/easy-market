@@ -54,6 +54,7 @@ urlpatterns = [
             path('commandes/orderdelivered',views.OrderDelivered.as_view()),
             path('commandes/',views.OrderDelivered.as_view()),
             path('commandes/vendeur/<int:id>/',views.OrderByVendeur.as_view()),
+            path('commandes/acheteur/<int:id>/',views.OrderByAcheteur.as_view()),
             
 
             # commandes veundeur
@@ -101,7 +102,7 @@ urlpatterns = [
             path('acheteurs/', views.AcheteurAllAPIView.as_view()),
             path('acheteur/', views.CreateAcheteurAPIView.as_view()),
             path('acheteur/<int:id>/', views.AcheteurByIdAPIView.as_view()),
-            path('acheteurs/vendeur/<int:vendeurId>/', views.RetreiveAcheteurByVendeurAPIView.as_view()),
+            path('acheteurs/vendeur/<int:id>/', views.RetreiveAcheteurByVendeurAPIView.as_view()),
 
             # vendeur
              #acheteur

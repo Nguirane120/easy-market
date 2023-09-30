@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from ..serializers import AcheteurSerialzer
-from ..models import Acheteur
+from ..serializers import AcheteurSerialzer, UserSerializer
+from ..models import Acheteur, User
 
 
 class CreateAcheteurAPIView(generics.CreateAPIView):
@@ -51,14 +51,14 @@ class AcheteurByIdAPIView(generics.RetrieveUpdateDestroyAPIView):
 
     def put(self, request, id, format=None):
         try:
-            item = Acheteur.objects.filter(archived=False).get(pk=id)
+            item = User.objects.filter(archived=False).get(pk=id)
         except Acheteur.DoesNotExist:
             return Response({
                 "status": "failure",
                 "message": "no such item with this id",
                 }, status=404)
         self.data = request.data.copy()        
-        serializer = AcheteurSerialzer(item, data= self.data, partial= True)
+        serializer = UserSerializer(item, data=self.data, partial= True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -81,9 +81,9 @@ class RetreiveAcheteurByVendeurAPIView(generics.RetrieveAPIView):
     queryset = Acheteur.objects.all()
     serializer_class = AcheteurSerialzer
 
-    def get(self, request, vendeurId, format=None):
+    def get(self, request, id, format=None):
         try:
-            items = Acheteur.objects.filter(archived=False).filter(vendeurId=vendeurId)
+            items = Acheteur.objects.filter(archived=False).filter(vendeur_id=id)
             serializer = AcheteurSerialzer(items,many=True)
             return Response(serializer.data)
         except Acheteur.DoesNotExist:

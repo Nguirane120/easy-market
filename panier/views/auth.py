@@ -59,7 +59,7 @@ class LoginView(generics.CreateAPIView):
                             }
                             return Response(response_data)
                     else:
-                        return Response(data={"message": "telephone ou mot de passe est incorrect ou vous avez ete bloque"}, status=401)
+                        return Response(data={"message": "Téléphone ou mot de passe est incorrect ou vous avez été bloqué(e)"}, status=401)
                 else:
                     return Response(data={"message": "Ce numero de telephone n'existe pas"}, status=401)
             except User.DoesNotExist:
