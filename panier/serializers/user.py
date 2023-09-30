@@ -16,7 +16,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
             firstName=validated_data['firstName'],
             lastName=validated_data['lastName'],
             email=validated_data['email'],
-            user_type=User.ACHETEUR,  # Set the user type to 'VENDEUR'
+            user_type=User.ADMIN,  # Set the user type to 'VENDEUR'
             adresse = validated_data['adresse']
         )
         # user.user_type='owner'

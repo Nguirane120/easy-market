@@ -5,6 +5,7 @@ from django.db import models
 from .article import Article
 from .payment import CallbackPayment
 from .user import User
+from .vendeur import Vendeur
 
 
 
@@ -29,7 +30,7 @@ class Order(models.Model):
     
     order_number = models.CharField(max_length=100, unique=True, default='0000')
     date_created = models.DateTimeField(auto_now_add=True)
-    userId = models.ForeignKey(User, on_delete=models.CASCADE, default=1 , null=True)
+    # userId = models.ForeignKey(User, on_delete=models.CASCADE, default=1 , null=True)
     articleId = models.ManyToManyField(Article)
     orderQuantity = models.IntegerField(default=0)
     status = models.CharField(max_length=150, choices=STATUS, default='En cours de traitement')
@@ -41,6 +42,8 @@ class Order(models.Model):
     firstName = models.CharField(max_length=100, blank=True)
     lastName = models.CharField(max_length=100, blank=True)
     adresse = models.CharField(blank=True, max_length=255, null=True)
+    vendeur_id = models.ForeignKey(Vendeur, on_delete=models.CASCADE, default=1 , null=True)
+
 
     def __str__(self):
         return f"{self.userId} - {self.status}"

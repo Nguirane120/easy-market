@@ -18,10 +18,10 @@ class VendeurSerialzer(serializers.ModelSerializer):
             firstName=validated_data['firstName'],
             email=validated_data.get("email"),
             adresse=validated_data['adresse'],
-            raisonSocial=validated_data['raisonSocial'],
+            # raisonSocial=validated_data['raisonSocial'],
             # logo=validated_data['logo'],
-            region=validated_data['region'],
-            ville=validated_data['ville'],
+           
+            # ville=validated_data['ville'],
             user_type=User.VENDEUR,
             
         )

@@ -17,7 +17,7 @@ class MyUserManager(BaseUserManager):
             firstName = firstName,
             phone= phone,
             adresse= adresse,
-            user_type='VENDEUR'
+            user_type='ADMIN'
         )
 
         user.set_password(password)
@@ -55,7 +55,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     ADMIN = 'ADMIN'
     STATUS = [
         (ACHETEUR, 'ACHETEUR'),
-        # (ADMIN, 'ADMIN'),
+        (ADMIN, 'ADMIN'),
         (VENDEUR, 'VENDEUR'),
     ]
     # status = models.CharField(
@@ -71,7 +71,7 @@ class User(AbstractBaseUser,PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
-    user_type = models.CharField(max_length=20, choices=STATUS, blank=True)
+    user_type = models.CharField(max_length=20, choices=STATUS, blank=True, default=ADMIN)
     archived = models.BooleanField(default=False)
 
     objects = MyUserManager()

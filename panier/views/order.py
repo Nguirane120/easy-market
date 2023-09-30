@@ -58,7 +58,7 @@ class OrderAPIView(generics.ListCreateAPIView):
         # Définissez la taille de la page à 10 ici.
         self.pagination_class.page_size = 10
         items = Order.objects.filter(
-            archived=False, userId=request.user.id).order_by('pk')
+            archived=False).order_by('pk')
         # itemsNonLivre = Order.objects.filter(archived=False, userId=request.user.id).order_by('pk')
         paginated_items = self.paginate_queryset(items)
         serializer = OrderSerializer(paginated_items, many=True)
@@ -242,5 +242,19 @@ class OrderSellerOrderNoDelivered(generics.ListAPIView):
             archived=False).exclude(status='Livrée').order_by('-pk')
 
         paginated_items = self.paginate_queryset(orderNoDelivered)
+        serializer = OrderSerializer(paginated_items, many=True)
+        return self.get_paginated_response(serializer.data)
+
+class OrderByVendeur(generics.RetrieveAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+    def get(self, request, id, format=None):
+        self.pagination_class.page_size = 10
+        id = self.kwargs.get('id')
+        orders = Order.objects.filter(
+            archived=False, vendeur_id=id)
+
+        paginated_items = self.paginate_queryset(orders)
         serializer = OrderSerializer(paginated_items, many=True)
         return self.get_paginated_response(serializer.data)

@@ -52,6 +52,8 @@ urlpatterns = [
             path('commandes/bywave',views.OrderByWave.as_view()),
             path('commandes/numberorder',views.NumberOrderNoDelivered.as_view()),
             path('commandes/orderdelivered',views.OrderDelivered.as_view()),
+            path('commandes/',views.OrderDelivered.as_view()),
+            path('commandes/vendeur/<int:id>/',views.OrderByVendeur.as_view()),
             
 
             # commandes veundeur
