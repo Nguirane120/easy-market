@@ -156,7 +156,7 @@ DATABASES = {
 
 DATABASES = {
     "default": dj_database_url.parse(
-        os.environ.get("RENDER_DB")
+        "postgres://easy_market_user:fsRsCBEQXGoMecb856z5QTbkiFxy5fqD@dpg-ckclpcuct0pc738u52tg-a.oregon-postgres.render.com/easy_market"
     )
 }
 
