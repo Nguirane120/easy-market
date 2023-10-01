@@ -155,7 +155,7 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(
+    "default": dj_database_url.parse(
         os.environ.get("RENDER_DB")
     )
 }
