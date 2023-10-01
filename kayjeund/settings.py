@@ -138,17 +138,19 @@ AUTH_USER_MODEL = "panier.User"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env['DB_NAME'],
-        'USER': env['DB_USER'],
-        'PASSWORD': env['DB_PASSWORD'],
-        'HOST': env['DB_HOST'],
-        'PORT': env['DB_PORT'],
-    } 
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
+    }
 }
 
 
 
-DATABASES['default']  = dj_database_url.parse(env["RENDER_DB"])
+
+DATABASES['default'] = dj_database_url.parse(os.environ.get("RENDER_DB"))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
