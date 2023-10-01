@@ -9,11 +9,10 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-import dj_database_url
 load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,9 +146,20 @@ DATABASES = {
 }
 
 
+# DATABASES['default'] = dj_database_url.parse(os.environ.get("RENDER_DB"))
 
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES['default'] = dj_database_url.parse(os.environ.get("RENDER_DB"))
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    "default": dj_database_url.config(
+        os.environ.get("RENDER_DB"),
+        conn_max_age=600
+    )
+}
 
 
 # Password validation
