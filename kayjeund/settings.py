@@ -156,8 +156,7 @@ DATABASES = {
 
 DATABASES = {
     "default": dj_database_url.config(
-        os.environ.get("RENDER_DB"),
-        conn_max_age=600
+        os.environ.get("RENDER_DB")
     )
 }
 
