@@ -69,6 +69,7 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     # ...
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     # ...
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -206,6 +207,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATIC_FILES_DIRS = (
     os.path.join(BASE_DIR, 'static')
 )
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # for cors 
 CSRF_HEADER_NAME = "HTTP_X_CSRFTOKEN"
