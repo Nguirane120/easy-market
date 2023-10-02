@@ -246,7 +246,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://*.herokuapp.com",
     "http://fewnu-compta.web.app",
     "http://*.web.app",
-    "https://api-easy.fewnu.app"
+    "https://api-easy.fewnu.app",
+    "https://easy-market-bakend.onrender.com"
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://127.0.0.1:3000",
@@ -259,7 +260,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://*.web.app",
     "https://fewnu-compta.web.app",
     "https://api-easy.fewnu.app",
-    'https://*.ngrok-free.app'
+    'https://*.ngrok-free.app',
+    "https://easy-market-bakend.onrender.com"
 ]
 CORS_ALLOW_CREDENTIALS = True
 
